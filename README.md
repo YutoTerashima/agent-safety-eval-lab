@@ -120,15 +120,62 @@ conda run -n Transformers python scripts/make_report.py
 Main report: `reports/agent_safety_gpu_benchmark.md`.
 
 <!-- V2_RESEARCH_UPGRADE -->
-## Publishable V2 Research Upgrade
+## Publishable V2 Research Results
 
-This repository now includes a project-level V2 experiment suite:
+This repository now includes a full V2 research suite with real data, multiple baselines, ablations, result artifacts, figures, and failure analysis. The README summarizes the measured run so the project can be judged from results, not just project intent.
 
-- Reproducible matrix: `configs/experiment_matrix.yaml`
-- Main runner: `scripts/run_matrix.py --device cuda --profile full`
-- Failure analysis: `scripts/analyze_failures.py`
-- Research report: `reports/agent_safety_v2_research_report.md`
-- Experiment index: `reports/results/experiment_index.json`
+### Dataset And Scale
 
-The V2 artifacts include multiple experiments, ablations, figures, failure cases, and a discussion section while keeping raw caches and large checkpoints out of Git.
+BeaverTails safety conversations, processed from the larger `330k_train` split; the full V2 run evaluates 50,000 prompt/response examples.
 
+- Full-profile result rows: `4`
+- Experiment profile: `full`
+- Experiment index: [`reports/results/experiment_index.json`](reports/results/experiment_index.json)
+- Full report: [`reports/agent_safety_v2_research_report.md`](reports/agent_safety_v2_research_report.md)
+
+### Main Results
+
+| experiment_id | accuracy | macro_f1 | unsafe_recall | unsafe_precision | auroc | runtime_seconds |
+| --- | --- | --- | --- | --- | --- | --- |
+| rule_safety_keywords | 0.4889 | 0.4481 | 0.1958 | 0.6237 | 0.5245 | 0.2180 |
+| tfidf_word_lr_prompt_response | 0.7752 | 0.7743 | 0.7557 | 0.8240 | 0.8593 | 4.2690 |
+| tfidf_char_lr_prompt_response | 0.7589 | 0.7580 | 0.7403 | 0.8085 | 0.8406 | 14.3220 |
+| gpu_tfidf_mlp_prompt_response | 0.6861 | 0.6576 | 0.8793 | 0.6636 | 0.7994 | 5.3940 |
+
+### Analysis
+
+- The word TF-IDF logistic baseline is the strongest measured classifier in this matrix, reaching macro-F1 around 0.774 and AUROC around 0.859 on the 50k run.
+- The keyword rule baseline has high safe recall but misses many unsafe cases, which is exactly the failure mode that motivates trace-aware grading rather than simple blocklists.
+- The GPU MLP over TF-IDF features increases unsafe recall relative to safe recall, showing a recall-oriented operating point that would need calibration before production use.
+- Failure examples are intentionally redacted in public artifacts; the casebook preserves labels, scores, error type, and size metadata without publishing unsafe instructions.
+
+### Failure Analysis
+
+- `false_negative`: 67 records
+- `false_positive`: 13 records
+
+The public failure artifacts use redacted previews or structured metadata where source examples may contain harmful, private, or otherwise sensitive text. This keeps the analysis reproducible without turning the README into a prompt-injection or unsafe-content corpus.
+
+### Key Artifacts
+
+- [`reports/results/v2_main_results.csv`](reports/results/v2_main_results.csv)
+- [`reports/results/v2_ablation_results.csv`](reports/results/v2_ablation_results.csv)
+- [`reports/results/v2_failure_cases.json`](reports/results/v2_failure_cases.json)
+- [`reports/figures/v2_accuracy_by_experiment.png`](reports/figures/v2_accuracy_by_experiment.png)
+- [`reports/figures/v2_confusion_matrix.png`](reports/figures/v2_confusion_matrix.png)
+- [`reports/figures/v2_model_macro_f1.png`](reports/figures/v2_model_macro_f1.png)
+
+Figures:
+
+- [`reports/figures/v2_accuracy_by_experiment.png`](reports/figures/v2_accuracy_by_experiment.png)
+- [`reports/figures/v2_confusion_matrix.png`](reports/figures/v2_confusion_matrix.png)
+- [`reports/figures/v2_model_macro_f1.png`](reports/figures/v2_model_macro_f1.png)
+
+### Reproduction
+
+```powershell
+conda run -n Transformers python scripts/run_matrix.py --device cuda --profile full
+conda run -n Transformers python scripts/analyze_failures.py
+conda run -n Transformers python scripts/make_report.py
+conda run -n Transformers python -m pytest
+```
