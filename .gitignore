@@ -5,3 +5,8 @@ __pycache__/
 .DS_Store
 test_tmp/
 .test_tmp/
+data/raw/
+data/cache/
+models/
+*.pt
+*.ckpt

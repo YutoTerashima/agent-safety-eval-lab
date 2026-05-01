@@ -103,3 +103,18 @@ tool types.
         `reports/real_beavertails_analysis.md`. The data is stored as hashes, lengths, safety labels,
         and category features to support real safety-risk coverage analysis without publishing raw
         harmful generations.
+
+## GPU-Backed Real Experiment
+
+This repository now includes a reproducible GPU-backed experiment using `PKU-Alignment/BeaverTails`.
+The smoke path runs on the local RTX 5090 Laptop GPU through the `Transformers` conda
+environment and writes metrics, figures, and a markdown report.
+
+```powershell
+conda run -n Transformers python scripts/download_data.py --smoke
+conda run -n Transformers python scripts/preprocess_data.py --max-samples 384
+conda run -n Transformers python scripts/run_experiment.py --device cuda --smoke
+conda run -n Transformers python scripts/make_report.py
+```
+
+Main report: `reports/agent_safety_gpu_benchmark.md`.

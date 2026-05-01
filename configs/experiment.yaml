@@ -1,0 +1,14 @@
+{
+  "kind": "classification",
+  "dataset": "PKU-Alignment/BeaverTails",
+  "config": "default",
+  "split": "30k_train",
+  "text_fields": [
+    "prompt",
+    "response"
+  ],
+  "label_expr": "unsafe",
+  "report": "agent_safety_gpu_benchmark.md",
+  "title": "Agent Safety GPU Benchmark",
+  "description": "GPU-backed safety classifier and rule baseline on BeaverTails safety data."
+}
