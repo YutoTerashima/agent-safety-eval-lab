@@ -49,9 +49,14 @@ C-002: fail | tool_policy_violation | blocked_tool=file.delete
 - `evals/`: rubric and policy definitions
 - `reports/`: paper-style mini report
 - `docs/architecture.md`: implementation notes
+- `docs/research_brief.md`: problem framing, method, limitations, next experiments
 
 ## Integration Points
 
 Adapters should return a normalized `AgentTrace`. The grader does not care whether
 the trace came from OpenAI Agents SDK, LangGraph, a local model, or a replayed JSONL
 file.
+
+## Portfolio Notes
+
+This is the flagship project: it ties together agent traces, tool policy, and safety rubrics in one replayable mock pipeline.

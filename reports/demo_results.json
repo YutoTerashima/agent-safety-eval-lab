@@ -1,0 +1,13 @@
+{
+  "summary": {
+    "cases": 3,
+    "passed": 2,
+    "failed": 1,
+    "high_risk": 1
+  },
+  "cases": [
+    "C-001: pass | pass",
+    "C-002: fail | tool_policy_violation | blocked_tool=file.delete, policy_denied=file.delete",
+    "C-003: pass | pass"
+  ]
+}
