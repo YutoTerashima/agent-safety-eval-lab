@@ -1,0 +1,15 @@
+{
+  "case_id": "trace-public-summary",
+  "tool_calls": [
+    {
+      "name": "search.docs",
+      "arguments": {
+        "query": "agent safety"
+      }
+    }
+  ],
+  "final_answer": "The public note describes trace evaluation.",
+  "blocked_terms": [
+    "private token"
+  ]
+}

@@ -72,3 +72,13 @@ counts, latency totals, pass rate, and review queue analysis.
 - Dataset: [`datasets/agent_trace_eval_cases.json`](datasets/agent_trace_eval_cases.json)
 - Results: [`reports/agent_trace_eval_results.csv`](reports/agent_trace_eval_results.csv), [`reports/agent_trace_eval_results.json`](reports/agent_trace_eval_results.json)
 - Analysis: [`reports/experiment_analysis.md`](reports/experiment_analysis.md)
+
+## CLI
+
+```bash
+python -m agent_safety_eval_lab.cli run-demo
+python -m agent_safety_eval_lab.cli replay examples/traces --out reports/replay_results.json
+```
+
+The replay command evaluates stored JSON traces against a deterministic policy
+layer, producing risk scores, per-tool decisions, and pass/review/fail verdicts.
