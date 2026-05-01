@@ -1,0 +1,16 @@
+[project]
+name = "agent-safety-eval-lab"
+version = "0.1.0"
+description = "Agent trace and tool-use safety evaluation lab."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Yuto Terashima", email = "yutoterashima4@gmail.com" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

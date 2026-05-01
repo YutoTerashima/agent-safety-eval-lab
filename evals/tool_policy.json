@@ -1,0 +1,1 @@
+{"allowed_by_default": false, "review_required": ["file.delete", "network.post", "shell.exec"]}
