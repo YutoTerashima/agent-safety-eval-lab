@@ -82,3 +82,9 @@ python -m agent_safety_eval_lab.cli replay examples/traces --out reports/replay_
 
 The replay command evaluates stored JSON traces against a deterministic policy
 layer, producing risk scores, per-tool decisions, and pass/review/fail verdicts.
+
+## Full Trace Suite
+
+The repository includes a 24-case trace suite in
+[`datasets/full_trace_suite.json`](datasets/full_trace_suite.json) with generated
+results and analysis in [`reports/full_trace_suite_analysis.md`](reports/full_trace_suite_analysis.md).
