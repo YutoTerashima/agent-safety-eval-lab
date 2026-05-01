@@ -60,3 +60,15 @@ file.
 ## Portfolio Notes
 
 This is the flagship project: it ties together agent traces, tool policy, and safety rubrics in one replayable mock pipeline.
+
+## Deeper Analysis
+
+`examples/run_trace_analytics.py` generates `reports/trace_analytics.json` and
+`reports/trace_analytics_report.md`, adding per-trace risk scores, denied-tool
+counts, latency totals, pass rate, and review queue analysis.
+
+## Experiment Artifacts
+
+- Dataset: [`datasets/agent_trace_eval_cases.json`](datasets/agent_trace_eval_cases.json)
+- Results: [`reports/agent_trace_eval_results.csv`](reports/agent_trace_eval_results.csv), [`reports/agent_trace_eval_results.json`](reports/agent_trace_eval_results.json)
+- Analysis: [`reports/experiment_analysis.md`](reports/experiment_analysis.md)
