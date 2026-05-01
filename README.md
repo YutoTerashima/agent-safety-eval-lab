@@ -118,3 +118,17 @@ conda run -n Transformers python scripts/make_report.py
 ```
 
 Main report: `reports/agent_safety_gpu_benchmark.md`.
+
+<!-- V2_RESEARCH_UPGRADE -->
+## Publishable V2 Research Upgrade
+
+This repository now includes a project-level V2 experiment suite:
+
+- Reproducible matrix: `configs/experiment_matrix.yaml`
+- Main runner: `scripts/run_matrix.py --device cuda --profile full`
+- Failure analysis: `scripts/analyze_failures.py`
+- Research report: `reports/agent_safety_v2_research_report.md`
+- Experiment index: `reports/results/experiment_index.json`
+
+The V2 artifacts include multiple experiments, ablations, figures, failure cases, and a discussion section while keeping raw caches and large checkpoints out of Git.
+

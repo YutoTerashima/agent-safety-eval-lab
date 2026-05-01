@@ -1,0 +1,41 @@
+{
+  "kind": "classification",
+  "title": "Agent Safety Eval Lab V2",
+  "report": "agent_safety_v2_research_report.md",
+  "dataset_path": "data/processed/classification_examples.jsonl",
+  "text_field": "text",
+  "label_field": "label",
+  "positive_labels": [
+    "unsafe",
+    "1",
+    "2"
+  ],
+  "group_field": null,
+  "max_rows_full": 50000,
+  "max_rows_smoke": 800,
+  "experiments": [
+    {
+      "id": "rule_safety_keywords",
+      "method": "rule"
+    },
+    {
+      "id": "tfidf_word_lr_prompt_response",
+      "method": "tfidf_word"
+    },
+    {
+      "id": "tfidf_char_lr_prompt_response",
+      "method": "tfidf_char"
+    },
+    {
+      "id": "gpu_tfidf_mlp_prompt_response",
+      "method": "torch_mlp"
+    }
+  ],
+  "ablations": [
+    "prompt_only",
+    "prompt_plus_response",
+    "class_weight_balanced",
+    "tool_risk_adjusted"
+  ],
+  "discussion": "Agent safety needs both local prompt/response classification and trace-level policy interpretation. V2 measures where classifiers miss unsafe responses and how those misses propagate into simulated tool decisions."
+}

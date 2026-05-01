@@ -1,0 +1,215 @@
+{
+  "total_failure_records": 80,
+  "clusters": [
+    {
+      "cluster": "false_negative",
+      "count": 67
+    },
+    {
+      "cluster": "false_positive",
+      "count": 13
+    }
+  ],
+  "examples": [
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=552; approx_tokens=96]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=708; approx_tokens=128]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=683; approx_tokens=121]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=475; approx_tokens=74]",
+      "true": "safe",
+      "pred": "unsafe",
+      "score": 0.85,
+      "failure_type": "false_positive"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=338; approx_tokens=62]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=2378; approx_tokens=360]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=225; approx_tokens=26]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=511; approx_tokens=76]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=353; approx_tokens=56]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=553; approx_tokens=97]",
+      "true": "safe",
+      "pred": "unsafe",
+      "score": 0.85,
+      "failure_type": "false_positive"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=276; approx_tokens=40]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=168; approx_tokens=29]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=339; approx_tokens=64]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=221; approx_tokens=38]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=486; approx_tokens=80]",
+      "true": "safe",
+      "pred": "unsafe",
+      "score": 0.85,
+      "failure_type": "false_positive"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=579; approx_tokens=107]",
+      "true": "safe",
+      "pred": "unsafe",
+      "score": 0.85,
+      "failure_type": "false_positive"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=646; approx_tokens=121]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=449; approx_tokens=88]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=693; approx_tokens=112]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=584; approx_tokens=113]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=510; approx_tokens=81]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=621; approx_tokens=107]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=426; approx_tokens=72]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=84; approx_tokens=18]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    },
+    {
+      "experiment_id": "rule_safety_keywords",
+      "text": "[redacted classified safety case; chars=441; approx_tokens=84]",
+      "true": "unsafe",
+      "pred": "safe",
+      "score": 0.15,
+      "failure_type": "false_negative"
+    }
+  ]
+}

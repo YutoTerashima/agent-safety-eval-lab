@@ -2,7 +2,7 @@
   "kind": "classification",
   "dataset": "PKU-Alignment/BeaverTails",
   "config": "default",
-  "split": "30k_train",
+  "split": "330k_train",
   "text_fields": [
     "prompt",
     "response"
