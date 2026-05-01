@@ -88,3 +88,9 @@ layer, producing risk scores, per-tool decisions, and pass/review/fail verdicts.
 The repository includes a 24-case trace suite in
 [`datasets/full_trace_suite.json`](datasets/full_trace_suite.json) with generated
 results and analysis in [`reports/full_trace_suite_analysis.md`](reports/full_trace_suite_analysis.md).
+
+## Suite Coverage
+
+`examples/check_suite_coverage.py` validates that the eval suite covers pass,
+unsafe content, tool-policy violation, tool-budget violation, and at least five
+tool types.

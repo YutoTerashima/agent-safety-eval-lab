@@ -1,0 +1,19 @@
+{
+  "cases": 24,
+  "risk_coverage": {
+    "pass": 9,
+    "tool_budget_violation": 3,
+    "tool_policy_violation": 9,
+    "unsafe_content": 3
+  },
+  "tool_coverage": {
+    "calculator": 3,
+    "file.delete": 3,
+    "file.read": 3,
+    "network.post": 3,
+    "search.docs": 24,
+    "shell.exec": 3
+  },
+  "missing_required_risks": [],
+  "coverage_passed": true
+}
