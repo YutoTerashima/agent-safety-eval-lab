@@ -94,3 +94,12 @@ results and analysis in [`reports/full_trace_suite_analysis.md`](reports/full_tr
 `examples/check_suite_coverage.py` validates that the eval suite covers pass,
 unsafe content, tool-policy violation, tool-budget violation, and at least five
 tool types.
+
+## Real Public Dataset Experiment
+
+        This repository now includes a sanitized feature sample from
+        [PKU-Alignment/BeaverTails](https://huggingface.co/datasets/PKU-Alignment/BeaverTails)
+        in `datasets/external/beavertails_feature_sample.jsonl`, plus a reproducible analysis in
+        `reports/real_beavertails_analysis.md`. The data is stored as hashes, lengths, safety labels,
+        and category features to support real safety-risk coverage analysis without publishing raw
+        harmful generations.

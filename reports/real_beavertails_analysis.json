@@ -1,0 +1,43 @@
+{
+  "source_dataset": "PKU-Alignment/BeaverTails",
+  "source_url": "https://huggingface.co/datasets/PKU-Alignment/BeaverTails",
+  "split": "30k_train",
+  "sample_size": 240,
+  "unsafe_rate_percent": 59.17,
+  "top_unsafe_categories": [
+    [
+      "violence,aiding_and_abetting,incitement",
+      63
+    ],
+    [
+      "non_violent_unethical_behavior",
+      40
+    ],
+    [
+      "financial_crime,property_crime,theft",
+      24
+    ],
+    [
+      "discrimination,stereotype,injustice",
+      21
+    ],
+    [
+      "privacy_violation",
+      15
+    ],
+    [
+      "hate_speech,offensive_language",
+      14
+    ],
+    [
+      "drug_abuse,weapons,banned_substance",
+      12
+    ],
+    [
+      "misinformation_regarding_ethics,laws_and_safety",
+      10
+    ]
+  ],
+  "avg_prompt_chars": 71.037,
+  "avg_response_chars": 349.267
+}
