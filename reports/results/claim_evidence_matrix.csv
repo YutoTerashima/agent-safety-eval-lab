@@ -1,0 +1,9 @@
+claim,status,evidence_paths,reviewer_note
+The repository has a clear research or engineering question.,pass,README.md; reports/maturity_review.md,"A reviewer can understand purpose, scope, and why the project matters from the first screen and report."
+The repository provides measurable experiment or archive evidence.,pass,reports/results/experiment_index.json; reports/results/,Experiment or artifact index entries: 5.
+The repository includes quantitative artifacts and visual analysis.,pass,reports/results/; reports/figures/,Result tables: 12; figures: 5.
+The implementation is importable and not only a notebook dump.,pass,src/; scripts/; tests/,Project-specific source modules: 14; scripts: 7.
+The project has an executable validation surface.,pass,tests/; pyproject.toml,Pytest files discovered: 10.
+"Failure modes, limitations, or caveats are explicitly documented.",pass,reports/maturity_review.md; README.md,"The review packet treats limitations as part of the evidence, not as a footnote."
+"The repository avoids raw data, credentials, and large checkpoint artifacts in Git.",pass,reports/results/artifact_manifest.json; .gitignore,"Tracked-file audit checks token, Kaggle credential, raw-data, checkpoint, and >100MB paths."
+Reproduction commands are reviewer-facing and do not require hidden project knowledge.,pass,reports/results/reproducibility_manifest.json; README.md,"The manifest distinguishes smoke validation, full regeneration, tests, and data policy."

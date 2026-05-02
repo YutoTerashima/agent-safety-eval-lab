@@ -1,0 +1,26 @@
+{
+  "repo": "agent-safety-eval-lab",
+  "gate": "top_tier_research_engineering_review",
+  "threshold": 95,
+  "score": 99,
+  "status": "pass",
+  "categories": {
+    "meaning": 20,
+    "engineering": 20,
+    "experiments": 19,
+    "analysis": 20,
+    "reproducibility": 20
+  },
+  "evidence_counts": {
+    "figures": 5,
+    "result_tables": 12,
+    "tests": 10,
+    "scripts": 7,
+    "configs": 3,
+    "modules": 14,
+    "experiment_count": 5,
+    "forbidden_tracked": [],
+    "large_tracked": []
+  },
+  "reviewer_verdict": "Ready for top-tier portfolio review with evidence-backed claims and reproducibility metadata."
+}

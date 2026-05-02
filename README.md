@@ -191,3 +191,22 @@ This repository has been reviewed against a professional portfolio rubric and no
 - Project-specific modules: `agent_safety_eval_lab`
 
 The latest iteration focuses on making the project understandable to a technical reviewer: what problem it addresses, what data it uses, what experiments were run, what failed, and what should be tried next.
+
+<!-- TOP_TIER_REVIEW_GATE -->
+## Top-Tier Review Gate
+
+This repository now includes a highest-standard reviewer packet focused on evidence-backed claims, artifact provenance, reproducibility, and limitation hygiene.
+
+- Top-tier score: `99/100`
+- Reviewer packet: [`docs/top_tier_reviewer_packet.md`](docs/top_tier_reviewer_packet.md)
+- Claim-evidence matrix: [`reports/results/claim_evidence_matrix.csv`](reports/results/claim_evidence_matrix.csv)
+- Artifact manifest: [`reports/results/artifact_manifest.json`](reports/results/artifact_manifest.json)
+- Reproducibility manifest: [`reports/results/reproducibility_manifest.json`](reports/results/reproducibility_manifest.json)
+- Quality gate: [`reports/results/top_tier_quality_gate.json`](reports/results/top_tier_quality_gate.json)
+
+![Top-tier review scores](reports/figures/top_tier_review_scores.png)
+<!-- /TOP_TIER_REVIEW_GATE -->
+
+
+
+

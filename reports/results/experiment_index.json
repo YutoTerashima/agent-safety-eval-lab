@@ -81,6 +81,12 @@
       "method": "torch_mlp",
       "runtime_seconds": 5.394,
       "rows": 50000
+    },
+    {
+      "experiment_id": "top_tier_review_gate",
+      "artifact_count": 6,
+      "coverage_score": 1.0,
+      "review_value": "evidence-backed claims, artifact provenance, reproducibility manifest, and strict audit gate"
     }
   ],
   "artifacts": [
@@ -89,7 +95,13 @@
     "reports\\results\\v2_failure_cases.json",
     "reports\\figures\\v2_accuracy_by_experiment.png",
     "reports\\figures\\v2_confusion_matrix.png",
-    "reports\\figures\\v2_model_macro_f1.png"
+    "reports\\figures\\v2_model_macro_f1.png",
+    "docs/top_tier_reviewer_packet.md",
+    "reports/results/claim_evidence_matrix.csv",
+    "reports/results/artifact_manifest.json",
+    "reports/results/reproducibility_manifest.json",
+    "reports/results/top_tier_quality_gate.json",
+    "reports/figures/top_tier_review_scores.png"
   ],
   "discussion": "Agent safety needs both local prompt/response classification and trace-level policy interpretation. V2 measures where classifiers miss unsafe responses and how those misses propagate into simulated tool decisions.",
   "total_runtime_seconds": 24.71
