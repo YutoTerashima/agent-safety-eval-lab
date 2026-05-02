@@ -179,34 +179,3 @@ conda run -n Transformers python scripts/analyze_failures.py
 conda run -n Transformers python scripts/make_report.py
 conda run -n Transformers python -m pytest
 ```
-
-<!-- MATURITY_ITERATION -->
-## Mature Research Engineering Pass
-
-This repository has been reviewed against a professional portfolio rubric and now includes project-specific research modules, a mature review report, and an end-to-end walkthrough notebook.
-
-- Maturity score: `94/100`
-- Review report: [`reports/maturity_review.md`](reports/maturity_review.md)
-- Walkthrough notebook: [`notebooks/maturity_walkthrough.ipynb`](notebooks/maturity_walkthrough.ipynb)
-- Project-specific modules: `agent_safety_eval_lab`
-
-The latest iteration focuses on making the project understandable to a technical reviewer: what problem it addresses, what data it uses, what experiments were run, what failed, and what should be tried next.
-
-<!-- TOP_TIER_REVIEW_GATE -->
-## Top-Tier Review Gate
-
-This repository now includes a highest-standard reviewer packet focused on evidence-backed claims, artifact provenance, reproducibility, and limitation hygiene.
-
-- Top-tier score: `99/100`
-- Reviewer packet: [`docs/top_tier_reviewer_packet.md`](docs/top_tier_reviewer_packet.md)
-- Claim-evidence matrix: [`reports/results/claim_evidence_matrix.csv`](reports/results/claim_evidence_matrix.csv)
-- Artifact manifest: [`reports/results/artifact_manifest.json`](reports/results/artifact_manifest.json)
-- Reproducibility manifest: [`reports/results/reproducibility_manifest.json`](reports/results/reproducibility_manifest.json)
-- Quality gate: [`reports/results/top_tier_quality_gate.json`](reports/results/top_tier_quality_gate.json)
-
-![Top-tier review scores](reports/figures/top_tier_review_scores.png)
-<!-- /TOP_TIER_REVIEW_GATE -->
-
-
-
-
